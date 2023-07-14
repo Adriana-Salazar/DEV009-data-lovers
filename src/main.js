@@ -16,10 +16,10 @@ function displayCharacters(info) {
   charactersImg.innerHTML = "";
   info.forEach((element) => {
     const characterHTML = `
-      <button class="img" style="height: 250px; width: 200px;">
-        <img src="${element.image}" data-name="${element.name}"/>
-        <div class="img--label">${element.name}</div>
-      </button>
+    <button class="img" style="height: 250px; width: 200px;">
+    <img src="${element.image}" data-name="${element.name}" data-species="${element.species}" data-gender="${element.gender}" data-origin="${element.origin.name}" data-location="${element.location.name}" />
+    <div class="img--label">${element.name}</div>
+  </button>
     `;
     charactersImg.innerHTML += characterHTML;
   });
@@ -110,21 +110,21 @@ function showCharacterData(data) {
 
 
 // Agregar el evento de submit al segundo formulario
-const filterForm2 = document.getElementById("filterForm2");
-filterForm2.addEventListener("submit", (event) => {
+const filterForm2 = document.getElementById("seasonSelect");
+filterForm2.addEventListener("click", (event) => {
   event.preventDefault();
-
-  const seasonSelect = document.getElementById("seasonSelect");
-  const filterType = seasonSelect.value;
-
-  // Filtrar los personajes por episodio
-  const filteredData1 = filterByEpisodeCount(dataCard, filterType);
-
-  // Mostrar los personajes filtrados
-  displayCharacters(filteredData1);
+  const filterType = event.target.value;
+  let ordercalcul = [...dataCard];
+  if (filterType === "participation"){
+    ordercalcul = dataCard;
+  } else {
+    ordercalcul = filterByEpisodeCount(dataCard, filterType);
+  }
+  
+  displayCharacters(ordercalcul);
 });
 
-const selectElement = document.getElementById("ordered");
+const selectElement = document.getElementById("orderFor");
 
 selectElement.addEventListener("click", (event) => {
   event.preventDefault();
@@ -145,7 +145,7 @@ selectElement.addEventListener("click", (event) => {
 const locationStats = computeStats(dataCard);
 
 const graphicData = document.getElementById("graphic");
-Chart.defaults.font.size = 20;
+Chart.defaults.font.size = 15;
 const chart = new Chart(graphicData, {
   type: "bar",
   data: {
