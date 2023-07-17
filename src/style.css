@@ -34,14 +34,17 @@ nav {
   justify-content:center;
   height: 80px;
   margin-top: 20px;
-  margin-bottom: 30px;  
+  margin-bottom: 30px;
+  
 }
 
 .menu{
   display: flex;
   align-items: center;
   list-style: none;
+
 }
+
 
 li {
   font-size: 18px;
@@ -53,10 +56,9 @@ li {
 
 @media (max-width: 768px) {
   .logo{
-  width: 400px;   
+  width: 400px;
+   
   }
-}  
-
   nav {
     flex-direction: column;
     align-items: center;
@@ -71,16 +73,16 @@ li {
   width: 100%;
   padding: 20px 0;
 }
-
 body {
   background-repeat: no-repeat;
-  background-size: 350%;  
+  background-size: 350%;
+  
+}
 }
 
 .filterselect:hover {
   background-color: #5f9e25; 
 }
-
 .filterselect{
   background-color: #298176;
   font-size: x-large;
@@ -89,12 +91,11 @@ body {
   border: none;
   height: 50px;
   padding: 5px;
-}
 
+}
 .orderselect:hover{
   background-color: #5f9e25;  
 }
-
 .orderselect {
   background-color: #298176;
   font-size: x-large;
@@ -122,7 +123,8 @@ body {
 button {
   background-color: #33867f;
   font-size: 100px;
-  font-weight: 600;  
+  font-weight: 600;
+  
 }
 
 option {

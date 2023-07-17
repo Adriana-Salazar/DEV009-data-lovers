@@ -24,7 +24,6 @@ export function filterByEpisodeCount(data, filterType) {
       (element) => element.episode.length === minCount
     );
   }
-  console.log(filteredData1);
   return filteredData1;
 }
 
