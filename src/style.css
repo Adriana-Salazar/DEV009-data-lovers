@@ -7,7 +7,7 @@
 header {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
 }
 
 body {
@@ -16,12 +16,11 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url(./images/desktop\ \(1\).jpg);
+  background: url(./images/desktop\\(1\).jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   background-attachment: fixed;
 }
-
 
 .main-container {
   width: 100%;
@@ -31,20 +30,17 @@ body {
 nav {
   background-color: #298176;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   height: 80px;
   margin-top: 20px;
   margin-bottom: 30px;
-  
 }
 
-.menu{
+.menu {
   display: flex;
   align-items: center;
   list-style: none;
-
 }
-
 
 li {
   font-size: 18px;
@@ -55,9 +51,8 @@ li {
 }
 
 @media (max-width: 768px) {
-  .logo{
-  width: 400px;
-   
+  .logo {
+    width: 400px;
   }
   nav {
     flex-direction: column;
@@ -65,25 +60,24 @@ li {
     padding-bottom: 100px;
     padding-top: 100px;
   }
-  
-.menu{
-  flex-direction: column;
-  margin-right: 0;
-  background-color: #298176;
-  width: 100%;
-  padding: 20px 0;
-}
-body {
-  background-repeat: no-repeat;
-  background-size: 350%;
-  
-}
+
+  .menu {
+    flex-direction: column;
+    margin-right: 0;
+    background-color: #298176;
+    width: 100%;
+    padding: 20px 0;
+  }
+  body {
+    background-repeat: no-repeat;
+    background-size: 350%;
+  }
 }
 
 .filterselect:hover {
-  background-color: #5f9e25; 
+  background-color: #5f9e25;
 }
-.filterselect{
+.filterselect {
   background-color: #298176;
   font-size: x-large;
   color: rgb(225, 236, 236);
@@ -91,10 +85,9 @@ body {
   border: none;
   height: 50px;
   padding: 5px;
-
 }
-.orderselect:hover{
-  background-color: #5f9e25;  
+.orderselect:hover {
+  background-color: #5f9e25;
 }
 .orderselect {
   background-color: #298176;
@@ -106,11 +99,11 @@ body {
   padding: 5px;
 }
 
-.calculationselect:hover{
-  background-color: #5f9e25;  
+.calculationselect:hover {
+  background-color: #5f9e25;
 }
 
-.calculationselect{
+.calculationselect {
   background-color: #378179;
   font-size: x-large;
   color: rgb(239, 247, 247);
@@ -124,12 +117,11 @@ button {
   background-color: #33867f;
   font-size: 100px;
   font-weight: 600;
-  
 }
 
 option {
   background-color: #ffffff;
-  color: #6aadaa; 
+  color: #6aadaa;
   font-weight: 600;
 }
 
@@ -137,18 +129,11 @@ h2 {
   text-align: center;
   font-size: 40px;
   padding-top: 25px;
-  padding-bottom: 15px;    
-}
-section{
-  margin-bottom: 100px;
-  
+  padding-bottom: 15px;
 }
 
-.section1 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+section {
+  margin-bottom: 100px;
 }
 
 .characters__img {
@@ -216,7 +201,7 @@ p {
   height: 100%;
   backface-visibility: hidden;
   border-radius: 10px;
-  border:4px solid #158027;
+  border: 4px solid #158027;
   overflow: hidden;
   transition: 0.5s;
 }
@@ -229,21 +214,9 @@ p {
   align-items: center;
 }
 
-.card .front h4 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 45px;
-  color: #fff;
-  background: rgba(0, 0, 0, -4);
-  text-align: center;
-}
-
 .card .back {
   transform: perspective(600px) rotateY(180deg);
   background: #2b7036;
-  padding: 15px;
   color: #f3f3f3;
   display: flex;
   flex-direction: column;
@@ -258,9 +231,9 @@ p {
 }
 
 .card .back h5 {
-  font-size: 20px;
+  font-size: 17px;
   letter-spacing: 1px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .card:hover .front {
