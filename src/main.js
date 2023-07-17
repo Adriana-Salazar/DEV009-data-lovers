@@ -46,9 +46,9 @@ filterForm.addEventListener("click", (event) => {
 });
 
 const botonRegreso = document.getElementById("backButton");
-botonRegreso.addEventListener("click", function() {
+botonRegreso.addEventListener("click", function () {
   hideCharacterData();
-  section1.style.display = "block";  
+  section1.style.display = "block";
   showFilterForm();
   hideRegresoButton();
 });
@@ -65,7 +65,7 @@ charactersImg.addEventListener("click", (event) => {
     };
 
     showCharacterData(characterData);
-    section1.style.display = "none";    
+    section1.style.display = "none";
     hideFilterForm();
     showRegresoButton();
   }
@@ -87,13 +87,11 @@ function hideCharacterData() {
   charactersDate.innerHTML = "";
 }
 
-
 function hideFilterForm() {
   if (filterForm) {
     filterForm.style.display = "none";
   }
 }
-
 
 function showCharacterData(data) {
   charactersDate.innerHTML = `
@@ -108,19 +106,18 @@ function showCharacterData(data) {
    `;
 }
 
-
 // Agregar el evento de submit al segundo formulario
 const filterForm2 = document.getElementById("seasonSelect");
 filterForm2.addEventListener("click", (event) => {
   event.preventDefault();
   const filterType = event.target.value;
   let ordercalcul = [...dataCard];
-  if (filterType === "participation"){
+  if (filterType === "participation") {
     ordercalcul = dataCard;
   } else {
     ordercalcul = filterByEpisodeCount(dataCard, filterType);
   }
-  
+
   displayCharacters(ordercalcul);
 });
 
@@ -138,8 +135,6 @@ selectElement.addEventListener("click", (event) => {
 
   displayCharacters(order);
 });
-
-
 
 //Calcular el recuento de personajes por ubicación utilizando la función computeStats()
 const locationStats = computeStats(dataCard);

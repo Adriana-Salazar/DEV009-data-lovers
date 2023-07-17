@@ -120,6 +120,7 @@ button {
   font-weight: 600;
 }
 
+
 option {
   background-color: #ffffff;
   color: #6aadaa;
@@ -136,6 +137,15 @@ h2 {
 section {
   margin-bottom: 100px;
 }
+#date_characters{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
 
 .characters__img {
   display: flex;
@@ -151,6 +161,12 @@ section {
   display: inline;
   font-size: 17px;
 }
+#date_characters .characters__date {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000000;
+ 
+}
 
 .img img {
   width: 180px;
@@ -158,21 +174,18 @@ section {
   object-fit: cover;
 }
 
-p {
-  font-size: 20px;
-}
-
 #backButton {
+  position: absolute;
+  bottom: 0; 
+  right: 0;
   display: none;
   background-image: url("./images/Mi proyecto.png");
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 0;
-  width: 200px;
-  height: 350px;
+  width: 150px;
+  height: 250px;
   border: none;
-  text-indent: -9999px;
+  background-color: #ffffff;
+
 }
 
 #chart-container {
@@ -232,9 +245,9 @@ p {
 }
 
 .card .back h5 {
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 1px;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .card:hover .front {
